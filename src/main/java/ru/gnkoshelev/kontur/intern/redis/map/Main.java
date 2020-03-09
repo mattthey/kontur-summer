@@ -1,24 +1,21 @@
 package ru.gnkoshelev.kontur.intern.redis.map;
 
 
+
 import java.util.Collection;
 import java.util.Map;
 
 public class Main
 {
     public static void main(String[] args) {
-//        HashMap<String, String> map = new HashMap<>();
-//        map.putAll(Map.of("1", "2", "3", "4"));
-//        map.containsValue("123");
-        int n = 10;
+        int n = 1000;
         RedisMap rm = new RedisMap();
         for (int i = 0; i < n; i++) {
             String ii = Integer.toString(i);
-            rm.put(ii, ii);
-//            System.out.println(ii);
+            rm.put(ii, Integer.toString(i + 9));
         }
         Long t = System.currentTimeMillis();
-        System.out.println(rm.containsValue(Integer.toString(n - 1)));
+        System.out.println(rm.containsValue(Integer.toString(n + 8)));
         System.out.println(System.currentTimeMillis() - t);
     }
 

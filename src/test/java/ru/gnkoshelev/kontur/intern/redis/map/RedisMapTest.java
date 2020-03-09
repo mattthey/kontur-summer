@@ -82,4 +82,6 @@ public class RedisMapTest {
 
         Assert.assertEquals("Значение не совпадает с ожидаемым", templateMap.entrySet(), map.entrySet());
     }
+
+    // TODO сделать тесты с null
 }
